@@ -1,0 +1,217 @@
+$arch_blue: #1793D1;
+
+body {
+    background: rgb(250,250,250);
+    color: rgb(20,20,20);
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 400;
+    letter-spacing: -.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    letter-spacing: -.035em;
+}
+
+a {
+    color: $arch_blue;
+}
+
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+#page_wrapper {
+    
+}
+
+#header_wrapper {
+    position: fixed;
+    z-index: 9999;
+    height: 4em;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    background: rgb(20,20,20);
+    border-bottom: 4px solid $arch_blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+    transition: .25s ease all;
+
+    &.tiny {
+        height: 3em;
+        .logo img {
+            height: 1.5em;
+        }
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        img {
+            height: 2em;
+            margin-top: .5em;
+            width: auto;
+            transition: .25s ease all;
+        }
+    }
+
+    .navigation {
+        a {
+            text-decoration: none;
+            color: #fff;
+            padding: .5em;
+            margin-left: 1em;
+            font-size: 1em;
+            position: relative;
+            opacity: .9;
+            transition: .25s ease all;
+
+            &:after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                bottom: .125em;
+                left: 0;
+                transform: scaleX(0);
+                background: white;
+                opacity: .75;
+                transition: .25s ease all;
+            }
+
+            &:hover {
+                opacity: 1;
+                &:after {
+                    transform: scaleX(1);
+                }
+            }
+
+            &.active {
+                color: $arch_blue;
+            }
+
+            button {
+                background: none;
+                border: none;
+                border: 1px solid $arch_blue;
+                color: #fff;
+                padding: .6em 1em .35em;
+                border-radius: 1em;
+                cursor: pointer;
+                transition: .25s ease all;
+                &:hover {
+                    background: $arch_blue;
+                }
+            }
+        }
+    }
+}
+
+.hero_wrapper {
+    height: 20em;
+    background-size: cover;
+    background-position: center center;
+    padding: 8em 4em 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    
+    h1, h2 {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        text-shadow: 0px 2px 12px rgba(0,0,0,.2);
+    }
+    
+    h2 {
+        font-weight: 300;
+        margin-top: .5em;
+        font-size: 1.25em;
+        b {
+            font-weight: 900;
+        }
+    }
+}
+
+.page_content_wrapper {
+    width: 100%;
+    position: relative;
+    padding: 2em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.home_content_news {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 2em;
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+.home_content_sidebar {
+    min-width: 360px;
+
+    .home_content_packageupdates {
+        border: 1px solid rgb(200,200,200);
+        padding: 1em;
+        border-radius: .5em;
+        a {
+            font-size: .85em;
+            line-height: 1rem;
+        }
+
+        h6 {
+            font-size: 1em;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.news_article {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid rgb(150,150,150);
+
+    .news_meta {
+        text-transform: uppercase;
+        letter-spacing: .035em;
+        margin-bottom: -.5em;
+    }
+
+    p {
+        font-size: .9em;
+    }
+
+    pre {
+        font-size: .85em;
+    }
+
+    h1 {
+        font-size: 1.25em;
+        a {
+            font-size: 1em;
+            margin: .25em 0 0;
+            padding: 0;
+            text-decoration: none;
+            color: $arch_blue;
+        }
+    }
+}

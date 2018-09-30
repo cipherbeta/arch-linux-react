@@ -1,0 +1,165 @@
+body {
+  background: #fafafa;
+  color: #141414;
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 400;
+  letter-spacing: -.01em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  letter-spacing: -.035em; }
+
+a {
+  color: #1793D1; }
+
+pre {
+  white-space: pre-wrap;
+  /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
+
+#header_wrapper {
+  position: fixed;
+  z-index: 9999;
+  height: 4em;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  background: #141414;
+  border-bottom: 4px solid #1793D1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  transition: .25s ease all; }
+  #header_wrapper.tiny {
+    height: 3em; }
+    #header_wrapper.tiny .logo img {
+      height: 1.5em; }
+  #header_wrapper .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #header_wrapper .logo img {
+      height: 2em;
+      margin-top: .5em;
+      width: auto;
+      transition: .25s ease all; }
+  #header_wrapper .navigation a {
+    text-decoration: none;
+    color: #fff;
+    padding: .5em;
+    margin-left: 1em;
+    font-size: 1em;
+    position: relative;
+    opacity: .9;
+    transition: .25s ease all; }
+    #header_wrapper .navigation a:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: .125em;
+      left: 0;
+      transform: scaleX(0);
+      background: white;
+      opacity: .75;
+      transition: .25s ease all; }
+    #header_wrapper .navigation a:hover {
+      opacity: 1; }
+      #header_wrapper .navigation a:hover:after {
+        transform: scaleX(1); }
+    #header_wrapper .navigation a.active {
+      color: #1793D1; }
+    #header_wrapper .navigation a button {
+      background: none;
+      border: none;
+      border: 1px solid #1793D1;
+      color: #fff;
+      padding: .6em 1em .35em;
+      border-radius: 1em;
+      cursor: pointer;
+      transition: .25s ease all; }
+      #header_wrapper .navigation a button:hover {
+        background: #1793D1; }
+
+.hero_wrapper {
+  height: 20em;
+  background-size: cover;
+  background-position: center center;
+  padding: 8em 4em 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; }
+  .hero_wrapper h1, .hero_wrapper h2 {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2); }
+  .hero_wrapper h2 {
+    font-weight: 300;
+    margin-top: .5em;
+    font-size: 1.25em; }
+    .hero_wrapper h2 b {
+      font-weight: 900; }
+
+.page_content_wrapper {
+  width: 100%;
+  position: relative;
+  padding: 2em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start; }
+
+.home_content_news {
+  flex-grow: 1;
+  text-align: center;
+  margin-right: 2em; }
+  .home_content_news h1 {
+    font-size: 1.5em; }
+
+.home_content_sidebar {
+  min-width: 360px; }
+  .home_content_sidebar .home_content_packageupdates {
+    border: 1px solid #c8c8c8;
+    padding: 1em;
+    border-radius: .5em; }
+    .home_content_sidebar .home_content_packageupdates a {
+      font-size: .85em;
+      line-height: 1rem; }
+    .home_content_sidebar .home_content_packageupdates h6 {
+      font-size: 1em;
+      margin: 0;
+      padding: 0; }
+
+.news_article {
+  padding: 1em;
+  text-align: left;
+  border-bottom: 1px solid #969696; }
+  .news_article .news_meta {
+    text-transform: uppercase;
+    letter-spacing: .035em;
+    margin-bottom: -.5em; }
+  .news_article p {
+    font-size: .9em; }
+  .news_article pre {
+    font-size: .85em; }
+  .news_article h1 {
+    font-size: 1.25em; }
+    .news_article h1 a {
+      font-size: 1em;
+      margin: .25em 0 0;
+      padding: 0;
+      text-decoration: none;
+      color: #1793D1; }
