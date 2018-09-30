@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import posed, { PoseGroup } from 'react-pose';
 import backgroundimg from '../assets/img/landing-background.jpg';
 
 const news_url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.archlinux.org%2Ffeeds%2Fnews%2F';
