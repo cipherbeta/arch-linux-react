@@ -24,6 +24,20 @@ pre {
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */ }
 
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: .25s ease all; }
+  button.outline {
+    border: 1px solid white;
+    padding: .5em 1em;
+    color: white;
+    margin: 1em .5em .5em;
+    border-radius: .25em; }
+    button.outline:hover {
+      background: #1793D1; }
+
 #header_wrapper {
   position: fixed;
   top: 0;
@@ -126,7 +140,7 @@ pre {
   align-items: flex-start; }
 
 .home_content_news {
-  flex-grow: 1;
+  flex-grow: 4;
   text-align: center;
   margin-right: 2em; }
   .home_content_news h1 {
@@ -134,7 +148,12 @@ pre {
 
 /* STYLES FOR HOME SIDEBAR */
 .home_content_sidebar {
-  min-width: 360px; }
+  flex-grow: 1; }
+  .home_content_sidebar .home_content_description {
+    padding: 0 1em 1em; }
+    .home_content_sidebar .home_content_description p {
+      text-indent: 1em;
+      font-size: .9em; }
   .home_content_sidebar .home_content_packageupdates {
     border: 1px solid #c8c8c8;
     padding: 1em;

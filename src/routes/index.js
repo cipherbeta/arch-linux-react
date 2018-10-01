@@ -11,7 +11,7 @@ import Download from '../pages/download';
 
 const RouteContainer = posed.div({
     enter: { opacity: 1, delay: 350, beforeChildren: true, y: 0 },
-    exit: { opacity: 0, y: -50 }
+    exit: { opacity: 0, y: -25 }
 });
 
 const Routes = (props) => (
