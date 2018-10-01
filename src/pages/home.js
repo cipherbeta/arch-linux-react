@@ -11,11 +11,6 @@ const Article = posed.div({
     exit: { opacity: 0, y: 100 }
 });
 
-const ArticleWrapper = posed.div({
-    enter: { opacity: 1, staggerChildren: 400 },
-    exit: { opacity: 0 }
-});
-
 class Home extends Component {
     state = {
         news: [],
@@ -57,8 +52,7 @@ class Home extends Component {
                     </Article>
                 )
             });
-        }
-        let items = this.state.news;        
+        }    
         return data;
     }
 
@@ -93,8 +87,8 @@ class Home extends Component {
                 </div>
                 <div className="home_content_sidebar">
                     <div className="home_content_packageupdates">
-                    <h6>Recent Package Updates</h6>
-                    {this.mapPackageDataFeed()}
+                        <h6>Recent Package Updates</h6>
+                        {this.mapPackageDataFeed()}
                     </div>
                 </div>
             </div>

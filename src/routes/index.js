@@ -14,24 +14,21 @@ const RouteContainer = posed.div({
     exit: { opacity: 0, y: -50 }
 });
 
-const Routes = (props) => {
-    return(
-        <Route render={({location}) => (
-            <PoseGroup>
-                <RouteContainer key={location.key}>
-                    <Switch location={location}>
-                        <Route exact path="/" component={Home} key="home"/>
-                        <Route path="/about" component={About} key="about"/>
-                        <Route path="/bugs" component={Bugs} key="bugs"/>
-                        <Route path="/security" component={Security} key="security"/>
-                        <Route path="/aur" component={Aur} key="aur"/>
-                        <Route path="/download" component={Download} key="download"/>
-                    </Switch>
-                </RouteContainer>
-            </PoseGroup>
-            
-        )}/>
-    )
-}
+const Routes = (props) => (
+    <Route render={ ({ location }) => (
+        <PoseGroup>
+            <RouteContainer key={location.key}>
+                <Switch location={location}>
+                    <Route exact path="/" component={Home} key="home"/>
+                    <Route path="/about" component={About} key="about"/>
+                    <Route path="/bugs" component={Bugs} key="bugs"/>
+                    <Route path="/security" component={Security} key="security"/>
+                    <Route path="/aur" component={Aur} key="aur"/>
+                    <Route path="/download" component={Download} key="download"/>
+                </Switch>
+            </RouteContainer>
+        </PoseGroup>
+    )}/>
+)
 
 export default Routes;
