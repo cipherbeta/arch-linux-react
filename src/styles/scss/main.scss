@@ -31,6 +31,7 @@ pre {
 
 #header_wrapper {
     position: fixed;
+    top: 0;
     z-index: 9999;
     height: 4em;
     width: 100%;
@@ -49,6 +50,7 @@ pre {
         height: 3em;
         .logo img {
             height: 1.5em;
+            margin-top: .25em;
         }
     }
 
@@ -59,7 +61,6 @@ pre {
     
         img {
             height: 2em;
-            margin-top: .5em;
             width: auto;
             transition: .25s ease all;
         }
@@ -117,6 +118,8 @@ pre {
     }
 }
 
+
+/* STYLES FOR HERO TOPBAR ELEMENT */
 .hero_wrapper {
     height: 20em;
     background-size: cover;
@@ -145,6 +148,8 @@ pre {
     }
 }
 
+
+/* STYLES FOR HOME PAGE LAYOUT */
 .page_content_wrapper {
     width: 100%;
     position: relative;
@@ -164,6 +169,8 @@ pre {
         font-size: 1.5em;
     }
 }
+
+/* STYLES FOR HOME SIDEBAR */
 
 .home_content_sidebar {
     min-width: 360px;
@@ -185,6 +192,7 @@ pre {
     }
 }
 
+/* STYLES FOR NEWS ARTICLES ON HOME PAGE */
 .news_article {
     padding: 1em;
     text-align: left;
@@ -214,4 +222,11 @@ pre {
             color: $arch_blue;
         }
     }
+}
+
+/* GENERAL STYLES FOR NON HOME PAGES */
+.page_alt_wrapper {
+    padding: 4em 2em 2em;
+    min-height: 105vh;
+    box-sizing: border-box;
 }

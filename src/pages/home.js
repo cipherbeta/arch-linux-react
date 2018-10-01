@@ -6,6 +6,16 @@ import backgroundimg from '../assets/img/landing-background.jpg';
 const news_url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.archlinux.org%2Ffeeds%2Fnews%2F';
 const packages_url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.archlinux.org%2Ffeeds%2Fpackages%2F';
 
+const Article = posed.div({
+    enter: { opacity: 1, y: 0, delay: (i) => i * 50 },
+    exit: { opacity: 0, y: 100 }
+});
+
+const ArticleWrapper = posed.div({
+    enter: { opacity: 1, staggerChildren: 400 },
+    exit: { opacity: 0 }
+});
+
 class Home extends Component {
     state = {
         news: [],
@@ -38,16 +48,17 @@ class Home extends Component {
         if(this.state.news.length > 0){
             data = this.state.news.map((item, i) => {
                 return(
-                    <div className="news_article" key={i}>
+                    <Article className="news_article" key={i}>
                         <div className="news_meta">
                         <small>{item.pubDate} - {item.author}</small>
                         </div>
                         <h1><a href={item.link} dangerouslySetInnerHTML={{__html: item.title}}></a></h1>
                         <div className="news_content" dangerouslySetInnerHTML={{__html: item.description }}/>
-                    </div>
+                    </Article>
                 )
             });
         }
+        let items = this.state.news;        
         return data;
     }
 
@@ -75,7 +86,10 @@ class Home extends Component {
             <div className="page_content_wrapper">
                 <div className="home_content_news">
                     <h1>Recent News</h1>
-                    {this.mapNewsDataFeed()}
+                    <PoseGroup>
+                        {this.mapNewsDataFeed()}
+                    </PoseGroup>
+                   
                 </div>
                 <div className="home_content_sidebar">
                     <div className="home_content_packageupdates">

@@ -17,10 +17,9 @@ class Header extends Component {
 
     handleScroll = () => {
         let y = Math.round(window.scrollY);
-        console.log(y);
-        if(y > 60 && this.state.mini === false) {
+        if(y > 0 && this.state.mini === false) {
             this.setState({ mini: true });
-        } else if (y < 60 && this.state.mini === true) {
+        } else if (y < 1 && this.state.mini === true) {
             this.setState({ mini: false });
         }
     }
